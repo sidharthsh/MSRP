@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> numbers[7];
+    int temp = 0;
+    int min, smin, max;
+    max = 0;
+    for (int i = 0; i < 7; i++) {
+        cin >> temp;
+        if (temp > max) {
+            max = temp;
+        }
+        if (temp <= min) {
+            smin = min;
+            min = temp;
+        }
+    }
+
+    cout << " " << min << " " << smin << " " << max - min - smin;
+}
